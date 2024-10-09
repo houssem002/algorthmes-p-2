@@ -1,0 +1,21 @@
+Algorithme InsertionAlternatif
+    // Entrée: Un tableau non trié "arr"
+    // Sortie: Le tableau "arr" trié en ordre croissant
+
+    Pour i de 1 à longueur(arr) - 1 faire
+        // Stocker l'élément actuel
+        entier clé <= arr[i]  
+        entier position <= i  
+
+        //Shift elements to the right until the correct position for key is found
+        Tant que position > 0 et arr[position - 1] > clé faire
+            arr[position] <= arr[position - 1]  // Shift the larger element to the right
+            position <= position - 1  //move to previous position
+        FinTantQue
+
+        // Insert the key at its correct position
+        arr[position] <= clé
+    FinPour
+
+    // Le tableau "arr" est maintenant trié
+FinAlgorithme
